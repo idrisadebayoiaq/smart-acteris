@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Account | Smart Acteris</title>
+  <meta name="description" content="Manage your Smart Acteris account." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1'%3E%3Cstop stop-color='%235ee7ff'/%3E%3Cstop offset='1' stop-color='%238b5cf6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='9' fill='url(%23g)'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body data-page="account">
+  <main>
+    <section class="page-hero" id="account-loading">
+      <div class="container"><p>Loading your account…</p></div>
+    </section>
+
+    <div id="account-root" hidden>
+      <section class="page-hero">
+        <div class="container">
+          <div class="breadcrumb"><a href="index.html">Home</a> / My account</div>
+          <div class="account-head">
+            <div class="account-avatar" id="acc-avatar">?</div>
+            <div>
+              <h1 id="acc-name">Acteris member</h1>
+              <p id="acc-email"></p>
+            </div>
+            <button class="btn btn-ghost" id="sign-out">Sign out</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top:0">
+        <div class="container grid grid-3">
+          <div class="card">
+            <span class="eyebrow">Overview</span>
+            <dl class="meta-list">
+              <div><dt>Member since</dt><dd id="acc-since"></dd></div>
+              <div><dt>Email status</dt><dd id="acc-verified"></dd></div>
+              <div><dt>Plan</dt><dd>Acteris Free</dd></div>
+            </dl>
+          </div>
+
+          <form class="card auth-form" id="form-profile" novalidate>
+            <span class="eyebrow">Profile</span>
+            <div id="profile-msg" class="auth-alert" role="status"></div>
+            <div class="field">
+              <label for="pf-name">Full name</label>
+              <input id="pf-name" name="full_name" class="input" type="text" autocomplete="name" placeholder="Your name" />
+            </div>
+            <button type="submit" class="btn btn-primary">Save profile</button>
+          </form>
+
+          <form class="card auth-form" id="form-password" novalidate>
+            <span class="eyebrow">Security</span>
+            <div id="password-msg" class="auth-alert" role="status"></div>
+            <div class="field">
+              <label for="pw-new">New password</label>
+              <div class="pw-field">
+                <input id="pw-new" name="password" class="input" type="password" autocomplete="new-password" placeholder="At least 8 characters" />
+              </div>
+            </div>
+            <button type="submit" class="btn btn-ghost">Change password</button>
+          </form>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>
