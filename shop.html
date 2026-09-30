@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop Smartwatches | Smart Acteris</title>
+  <meta name="description" content="Shop the full Smart Acteris smartwatch collection: Nova, Pulse, Titan, Lumen, Aero and Heritage." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' x2='1'%3E%3Cstop stop-color='%235ee7ff'/%3E%3Cstop offset='1' stop-color='%238b5cf6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='9' fill='url(%23g)'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body data-page="shop">
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb"><a href="index.html">Home</a> / Shop</div>
+        <span class="eyebrow">The collection</span>
+        <h1>Shop all <span class="grad-text">watches</span></h1>
+        <p class="lead">Six watches, one philosophy: technology that disappears into your day. Free express shipping and 30-day returns on every order.</p>
+      </div>
+    </section>
+
+    <section class="section-tight" style="padding-top:0">
+      <div class="container">
+        <div class="shop-toolbar" style="margin-bottom:2.5rem">
+          <div class="filters" role="group" aria-label="Filter by category">
+            <button class="chip active" data-cat="All">All</button>
+            <button class="chip" data-cat="Lifestyle">Lifestyle</button>
+            <button class="chip" data-cat="Fitness">Fitness</button>
+            <button class="chip" data-cat="Outdoor">Outdoor</button>
+            <button class="chip" data-cat="Classic">Classic</button>
+          </div>
+          <div style="display:flex;align-items:center;gap:1rem">
+            <span id="result-count" style="color:var(--dim);font-size:.9rem"></span>
+            <select id="sort" class="select" aria-label="Sort products">
+              <option value="featured">Featured</option>
+              <option value="low">Price: low to high</option>
+              <option value="high">Price: high to low</option>
+              <option value="rating">Top rated</option>
+            </select>
+          </div>
+        </div>
+        <div class="grid grid-3" id="shop-grid"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Compare</span>
+          <h2>Which Acteris is right for you?</h2>
+        </div>
+        <div class="compare-wrap reveal">
+          <table class="compare">
+            <thead>
+              <tr><th></th><th>Nova</th><th>Pulse</th><th>Titan</th><th>Heritage</th></tr>
+            </thead>
+            <tbody>
+              <tr><th>Price</th><td>$399</td><td>$249</td><td>$599</td><td>$449</td></tr>
+              <tr><th>Battery</th><td>5 days</td><td>9 days</td><td>28 days</td><td>25 days</td></tr>
+              <tr><th>Display</th><td>2,000-nit AMOLED</td><td>1,200-nit AMOLED</td><td>3,000-nit AMOLED</td><td>Hybrid OLED</td></tr>
+              <tr><th>ECG</th><td class="yes">✓</td><td class="no">-</td><td class="yes">✓</td><td class="no">-</td></tr>
+              <tr><th>Dual-band GPS</th><td class="no">-</td><td class="yes">✓</td><td class="yes">✓</td><td class="no">-</td></tr>
+              <tr><th>LTE</th><td>Optional</td><td class="no">-</td><td class="yes">✓</td><td class="no">-</td></tr>
+              <tr><th>Water rating</th><td>5 ATM</td><td>5 ATM</td><td>10 ATM</td><td>5 ATM</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
