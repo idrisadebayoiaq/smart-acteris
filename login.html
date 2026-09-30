@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login — SNARTEX</title>
+  <meta name="description" content="Sign in to your SNARTEX client portal.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="login">
+  <div id="site-header"></div>
+
+  <main>
+    <section class="page-hero" style="padding:4rem 0 3rem">
+      <div class="bg-gear" data-gear="16"></div>
+      <div class="container reveal">
+        <div class="breadcrumb"><a href="index.html">Home</a> / <span>Client Portal</span></div>
+        <h1>Client <span class="accent">Portal</span></h1>
+      </div>
+    </section>
+
+    <section>
+      <div class="container auth-wrap">
+        <div class="reveal">
+          <div class="tag">Secure Access</div>
+          <h2>Track every <span class="accent">project</span> in one place.</h2>
+          <p style="margin-top:1.5rem">Your SNARTEX account gives you a single place to manage your company profile, follow quotes and stay in contact with your project engineer.</p>
+          <ul class="checklist">
+            <li>Encrypted, password-protected access</li>
+            <li>Manage your contact and company details</li>
+            <li>Direct line to your assigned engineer</li>
+          </ul>
+        </div>
+
+        <div class="auth-card reveal">
+          <div class="auth-tabs" role="tablist">
+            <button type="button" class="auth-tab active" data-auth-tab="login" role="tab">Sign In</button>
+            <button type="button" class="auth-tab" data-auth-tab="signup" role="tab">Create Account</button>
+          </div>
+
+          <form class="form" id="login-form" data-auth-panel="login">
+            <div class="field"><label for="login-email">Email</label><input id="login-email" name="email" type="email" required autocomplete="email" placeholder="john@company.com"></div>
+            <div class="field"><label for="login-password">Password</label><input id="login-password" name="password" type="password" required autocomplete="current-password" placeholder="••••••••"></div>
+            <button type="submit" class="btn btn-primary" data-arrow>Sign In</button>
+            <p class="form-note" aria-live="polite"></p>
+          </form>
+
+          <form class="form" id="signup-form" data-auth-panel="signup" hidden>
+            <div class="form-row">
+              <div class="field"><label for="su-name">Full Name</label><input id="su-name" name="full_name" required autocomplete="name" placeholder="John Carter"></div>
+              <div class="field"><label for="su-company">Company</label><input id="su-company" name="company" autocomplete="organization" placeholder="Acme Industries"></div>
+            </div>
+            <div class="field"><label for="su-email">Email</label><input id="su-email" name="email" type="email" required autocomplete="email" placeholder="john@company.com"></div>
+            <div class="form-row">
+              <div class="field"><label for="su-password">Password</label><input id="su-password" name="password" type="password" required minlength="6" autocomplete="new-password" placeholder="Min. 6 characters"></div>
+              <div class="field"><label for="su-confirm">Confirm</label><input id="su-confirm" name="confirm" type="password" required minlength="6" autocomplete="new-password" placeholder="Repeat password"></div>
+            </div>
+            <button type="submit" class="btn btn-primary" data-arrow>Create Account</button>
+            <p class="form-note" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>

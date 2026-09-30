@@ -45,6 +45,7 @@
             ${links
               .map(([href, label, key]) => `<a href="${href}" class="${key === page ? "active" : ""}">${label}</a>`)
               .join("")}
+            <span class="nav-auth" data-auth-slot><a href="login.html" class="${page === "login" ? "active" : ""}">Login</a></span>
             <a href="contact.html" class="btn btn-primary">Get a Quote</a>
           </nav>
           <button class="menu-toggle" aria-label="Toggle menu"><span></span></button>

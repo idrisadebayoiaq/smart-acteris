@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account — SNARTEX</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="account">
+  <div id="site-header"></div>
+
+  <main data-account hidden>
+    <section class="page-hero" style="padding:4rem 0 3rem">
+      <div class="bg-gear" data-gear="16"></div>
+      <div class="container">
+        <div class="breadcrumb"><a href="index.html">Home</a> / <span>Account</span></div>
+        <h1>Welcome, <span class="accent" data-user-name>Engineer</span></h1>
+      </div>
+    </section>
+
+    <section>
+      <div class="container account-grid">
+        <aside class="account-id">
+          <div class="avatar" data-user-initials>SX</div>
+          <div class="rows">
+            <div class="row"><small>Email</small><span data-user-email></span></div>
+            <div class="row"><small>Client ID</small><span class="mono" data-user-id></span></div>
+            <div class="row"><small>Member Since</small><span data-user-since></span></div>
+            <button type="button" class="btn btn-ghost" data-signout>Sign Out</button>
+          </div>
+        </aside>
+
+        <form class="form" id="profile-form">
+          <div class="tag">Profile</div>
+          <h3 style="font-size:2.2rem;margin-bottom:2rem">Account <span class="accent">Details</span></h3>
+          <div class="field"><label for="p-name">Full Name</label><input id="p-name" name="full_name" autocomplete="name"></div>
+          <div class="field"><label for="p-company">Company</label><input id="p-company" name="company" autocomplete="organization"></div>
+          <button type="submit" class="btn btn-primary" data-arrow>Save Changes</button>
+          <p class="form-note" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+  <script src="assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>
